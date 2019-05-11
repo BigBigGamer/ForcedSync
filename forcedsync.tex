@@ -1,0 +1,143 @@
+\input{text/pre}
+\usepackage{mwe}
+
+\begin{document}
+
+\def\labauthors{Виноградов И.Д., Шиков А.П.}
+\def\labgroup{430}
+\def\labnumber{1}
+\def\labtheme{Вынужденная синхронизация}
+\input{text/titlepage}
+
+\newpage
+\section*{Эксперимент}
+\textbf{Оборудование}
+\begin{enumerate}
+	\item Синхронизируемый автогенератор.
+	\item Генератор внешней силы (с регулировкой частоты и амплитуды ).
+	\item Осциллограф.
+\end{enumerate}
+
+\subsection*{Схема лабораторной установки}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = .7\linewidth]{img/scheme.png}
+	\caption{Схема лабораторной установки}
+	\label{fig:2}
+\end{figure}
+
+\subsection*{Мягкий режим}
+\subsubsection*{Изучение явления захватывания при мягком режиме возбуждения автогенератора}
+Был выставлен мягкий режим возбуждения генератора, для этого на управляющую сетку было подано напряжение 1.3 В.
+Амплитуда колебаний составляла $U_{amp} = 9$ В , на частоте $f_0 = 426.7$ кГц.
+
+При поданом внешнем воздействии, снималась зависимость амплитуды колебаний от частоты внешнего сигнала (АЧХ, см рис. \ref{fig:3}).
+Зависимость снималась только для синхронного режима, измерения прекращались, при переходе в режим биений.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = .99\linewidth]{graphs/soft1.pdf}
+	\caption{АЧХ для мягкого режима автогенератора}
+	\label{fig:3}
+\end{figure}
+
+Кривые для значени апмплитуды внешней силы $U_{out} = 1.3$ В и $U_{out} = 1$ В соответствуют сильному сигналу, $U_{out}
+= 0.3$ В и $U_{out} = 0.6$ В - слабому. Тип сигнала определялся по осциллограммам колебаний.
+
+\subsubsection*{Зависимость границ полосы удержания и захвата от амплитуды внешнего воздействия}
+
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width = .4\linewidth]{img/sync.pdf}
+% 	\label{fig:sync}
+% \end{figure}
+
+При тех же параматерах автогенератора снималась зависимость границ полосы удержания и полосы захвата от амплитуды внешнего воздействия. 
+
+Для измерения полосы захвата, частота менялась таким образом,чтобы переход происходил из области биений в область
+колебаний. Для полосы удержания частота менялась из области колебаний в область биений.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = .85\linewidth]{graphs/sync.png}
+	\caption{Зависимость границ полосы синхронизации от внешней амплитуды}
+	\label{fig:4}
+\end{figure}
+
+Как видно из рис. \ref{fig:4}. полоса захвата всегда меньше полосы удержания. Также ширина полосы синхронизации и
+разность между полосой удержания и полосой захвата увеличивается с увеличением амплитуды внешнего воздействия.
+
+Также была измерена зависимость амплитуды колебаний на (правой) границе полосы синхронизации.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = .85\linewidth]{graphs/amps1.png}
+	\caption{Амплитуда на правой границе полосы синхронизации ??}
+	\label{fig:5}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{minipage}{.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/1s.jpg}
+		\caption*{а}
+	\end{minipage}
+	\begin{minipage}{.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/0s.jpg}
+		\caption*{б}
+	\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{minipage}{.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/2s.jpg}
+		\caption*{в}
+	\end{minipage}
+	\begin{minipage}{.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/3s.jpg}
+		\caption*{г}
+	\end{minipage}
+	\caption{Фигура Лиссажу и осциллограмма в режиме синхронизации (а, б) и биений (в, г)}
+	\label{fig:6}
+\end{figure}
+
+
+\begin{figure}[H]
+	\begin{minipage}{.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/5s.jpg}
+		\caption*{Сильный сигнал}
+	\end{minipage}
+	\begin{minipage}{.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/6s.jpg}
+		\caption*{Слабый сигнал}
+	\end{minipage}
+	\caption{Осциллограмма режима биений в окрестностях границы полосы синхронизации}
+	\label{fig:7}
+\end{figure}
+
+\subsection*{Жесткий режим}
+\subsubsection*{АЧХ амплитуд внешнего сигнала}
+
+Для достижения жесткого режима на сетке лампы выставлено смещение $U =  2.95$ В.
+
+При увеличении обратной связи, колебания (без внешнего воздействия) появлялись при значении $P_1 = 75$, а при обратном
+ходе пропадали при $P_2 = 35$. Измерения проводились при $P_2 < P <P_1, P = 50$. Построенные графики приведены на рис. \ref{fig:hard}. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = .95\linewidth]{graphs/hard.pdf}
+	\caption{АЧХ жесткого режима}
+	\label{fig:hard}
+\end{figure}
+
+При амплитудах внешнего воздействия $U_{out} = 700$ мВ и $U_{out} = 500$ мВ наблюдается синхронизация. Кривые,
+полученные при $U_{out} = 400$ мВ и $U_{out} = 350$ мВ соответствуют резонансу.
+
+
+\end{document}
